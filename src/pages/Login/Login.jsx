@@ -1,11 +1,11 @@
-import './Login.scss'
+import "./Login.scss";
 
 function Login() {
-    return (
-        <div className='container'>
-            <a href="">ABC</a>
-        </div>
-    )
+  return (
+    <div className="container">
+      <a href="">ABC</a>
+    </div>
+  );
 }
 
-export default Login
+export default Login;
