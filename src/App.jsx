@@ -1,12 +1,10 @@
 import './App.scss'
+import Login from './pages/Login/Login'
 
 function App() {
-
   return (
     <>
-      <div>
-        <p></p>
-      </div>
+      <Login></Login>
     </>
   )
 }
