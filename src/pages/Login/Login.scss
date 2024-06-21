@@ -8,12 +8,22 @@
   background-repeat: no-repeat;
 }
 
+.title {
+  color: black;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .social-buttons {
   display: flex;
   justify-content: space-between;
-}
-
-.social-button {
-  flex: 1;
-  margin: 0 5px;
+  .social-button {
+    flex: 1;
+    margin: 0 5px;
+  }
 }

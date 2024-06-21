@@ -1,7 +1,5 @@
 import React from "react";
 import "./Login.scss";
-import CssBaseline from "@mui/material/CssBaseline";
-import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 
 import Button from "@mui/material/Button";
@@ -14,54 +12,49 @@ import AppleIcon from "@mui/icons-material/Apple";
 
 function Login() {
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <Container className="login-box">
-        <Box sx={{ bgcolor: "#fff" }}>
-          <Avatar
-            alt="Logo"
-            src="../src/assets/favicon.png"
-            sx={{ width: 50, height: 50 }}
-            variant="square"
-          />
+    <div className="login-box">
+      <Box sx={{ bgcolor: "#fff" }}>
+        <Avatar
+          alt="Logo"
+          src="../src/assets/favicon.png"
+          sx={{ width: 50, height: 50 }}
+          variant="square"
+        />
 
+        <div className="title-box">
           <h3 className="title">Welcome back!</h3>
           <span>
             <p>Don't have an account yet?</p>
             <a href="">Register</a>
           </span>
+        </div>
 
-          <form action="">
-            <TextField id="outlined-basic" label="Email" variant="outlined" />
-            <TextField
-              id="outlined-basic"
-              label="Password"
+        <form action="" className="form-container">
+          <TextField id="outlined-basic" label="Email" variant="outlined" />
+          <TextField id="outlined-basic" label="Password" variant="outlined" />
+
+          <Button variant="contained">Login</Button>
+
+          <Box className="social-buttons">
+            <Button
+              startIcon={<FacebookIcon />}
               variant="outlined"
+              className="social-button"
             />
-
-            <Button variant="contained">Login</Button>
-
-            <Box className="social-buttons">
-              <Button
-                startIcon={<FacebookIcon />}
-                variant="outlined"
-                className="social-button"
-              />
-              <Button
-                startIcon={<GoogleIcon />}
-                variant="outlined"
-                className="social-button"
-              />
-              <Button
-                startIcon={<AppleIcon />}
-                variant="outlined"
-                className="social-button"
-              />
-            </Box>
-          </form>
-        </Box>
-      </Container>
-    </React.Fragment>
+            <Button
+              startIcon={<GoogleIcon />}
+              variant="outlined"
+              className="social-button"
+            />
+            <Button
+              startIcon={<AppleIcon />}
+              variant="outlined"
+              className="social-button"
+            />
+          </Box>
+        </form>
+      </Box>
+    </div>
   );
 }
 
