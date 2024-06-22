@@ -1,6 +1,6 @@
 import React from "react";
 import "./Login.scss";
-import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
 
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
@@ -13,55 +13,65 @@ import { Avatar, Link, Paper, Typography, Grid } from "@mui/material";
 function Login() {
   return (
     <div className="login-box">
-      <Grid alignItems={"center"} justifyContent={"center"} display={"flex"}>
+      <Grid
+        alignItems={"center"}
+        justifyContent={"center"}
+        display={"flex"}
+        height={"100%"}
+      >
         <Paper elevation={20} className="paper">
-          <Grid alignItems={"center"}>
-            <Avatar
-              alt="Logo"
-              src="../src/assets/favicon.png"
-              sx={{ width: 50, height: 50 }}
-              variant="square"
+          <Avatar
+            alt="Logo"
+            src="../src/assets/favicon.png"
+            className="favicon"
+            sx={{ width: 50, height: 50 }}
+            variant="square"
+          />
+
+          <div className="title-box">
+            <Typography variant="h4">Welcome back!</Typography>
+            <span>
+              <Typography variant="caption">
+                Don't have an account yet?
+              </Typography>
+              <Link underline="none">Register</Link>
+            </span>
+          </div>
+
+          <form action="" className="form-container">
+            <TextField className="input-box" label="Email" variant="outlined" />
+            <TextField
+              className="input-box"
+              label="Password"
+              variant="outlined"
             />
 
-            <div className="title-box">
-              <Typography variant="h3">Welcome back!</Typography>
-              <span>
-                <Typography variant="caption">
-                  Don't have an account yet?
-                </Typography>
-                <Link underline="none">Register</Link>
-              </span>
-            </div>
+            <Button variant="contained">Login</Button>
+          </form>
 
-            <form action="" className="form-container">
-              <TextField id="outlined-basic" label="Email" variant="outlined" />
-              <TextField
-                id="outlined-basic"
-                label="Password"
-                variant="outlined"
-              />
+          <div className="divider-container">
+            <div className="divider"></div>
+            OR
+            <div className="divider"></div>
+          </div>
 
-              <Button variant="contained">Login</Button>
-
-              <Box className="social-buttons">
-                <Button
-                  startIcon={<FacebookIcon />}
-                  variant="outlined"
-                  className="social-button"
-                />
-                <Button
-                  startIcon={<GoogleIcon />}
-                  variant="outlined"
-                  className="social-button"
-                />
-                <Button
-                  startIcon={<AppleIcon />}
-                  variant="outlined"
-                  className="social-button"
-                />
-              </Box>
-            </form>
-          </Grid>
+          <Stack spacing={2} direction="row" className="social-buttons">
+            <Button
+              startIcon={<FacebookIcon />}
+              variant="outlined"
+              className="social-button"
+            />
+            <Button
+              startIcon={<GoogleIcon />}
+              variant="outlined"
+              className="social-button"
+            />
+            <Button
+              startIcon={<AppleIcon />}
+              variant="outlined"
+              className="social-button"
+            />
+          </Stack>
         </Paper>
       </Grid>
     </div>
