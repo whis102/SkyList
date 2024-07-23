@@ -1,4 +1,3 @@
-import React from "react";
 import "./Register.scss";
 import Stack from "@mui/material/Stack";
 
@@ -32,13 +31,20 @@ function Register() {
             <Typography variant="h4">Welcome back!</Typography>
             <span>
               <Typography variant="caption">
-                Don't have an account yet?
+                Have already got an account?
               </Typography>
-              <Link underline="none">Register</Link>
+              <Link underline="none" href="/login">
+                Login
+              </Link>
             </span>
           </div>
 
           <form action="" className="form-container">
+            <TextField
+              className="input-box"
+              label="Username"
+              variant="outlined"
+            />
             <TextField className="input-box" label="Email" variant="outlined" />
             <TextField
               className="input-box"
@@ -46,7 +52,7 @@ function Register() {
               variant="outlined"
             />
 
-            <Button variant="contained">Login</Button>
+            <Button variant="contained">Register</Button>
           </form>
 
           <div className="divider-container">

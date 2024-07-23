@@ -1,4 +1,3 @@
-import React from "react";
 import "./Login.scss";
 import Stack from "@mui/material/Stack";
 
@@ -32,9 +31,11 @@ function Login() {
             <Typography variant="h4">Welcome back!</Typography>
             <span>
               <Typography variant="caption">
-                Don't have an account yet?
+                Don&apos;t have an account yet?
               </Typography>
-              <Link underline="none">Register</Link>
+              <Link underline="none" href="/register">
+                Register
+              </Link>
             </span>
           </div>
 
@@ -46,7 +47,9 @@ function Login() {
               variant="outlined"
             />
 
-            <Button variant="contained">Login</Button>
+            <Button variant="contained" href="/">
+              Login
+            </Button>
           </form>
 
           <div className="divider-container">
